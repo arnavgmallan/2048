@@ -1,0 +1,14 @@
+{
+  "name": "2048 — Join the tiles",
+  "short_name": "2048",
+  "description": "A touch-friendly 2048 number puzzle.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf8ef",
+  "theme_color": "#faf8ef",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
