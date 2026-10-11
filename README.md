@@ -1,22 +1,26 @@
 # 2048
 
-A small, touch-friendly 2048 game that runs in the browser. Open `index.html` to play, or serve this folder from a static web host to use it as an installable web app.
+**Join the tiles.** This is a touch-friendly 2048 number puzzle that runs in your browser. Play the live game at [arnavgmallan.github.io/2048](https://arnavgmallan.github.io/2048/).
 
-## Play
+## How to play
 
-- Swipe on the board on iPhone or iPad.
-- Use the arrow keys on a keyboard.
-- Use **Undo** to roll back the last move, or **New game** to start over.
+- Slide tiles with the **arrow keys** on a keyboard or **swipe** on a touch screen.
+- Matching tiles merge into one; reach the **2048** tile to win. You can keep playing after winning.
+- **Undo** rolls back your last valid move. **New game** starts a fresh board.
+- Your current game and best score are saved in your browser on that device.
 
-Scores and the current game are saved in the browser. To add it to an iPhone or iPad Home Screen, open the hosted page in Safari, tap **Share**, then **Add to Home Screen**.
+## Install and offline play
 
-## Host it
+The site is a progressive web app. On a supported browser, use its install option to add it to your device. On iPhone or iPad, open the live game in Safari, tap **Share → Add to Home Screen**. After the first visit, the service worker caches the game files for offline use.
 
-This is a static site. The included GitHub Actions workflow publishes it to GitHub Pages whenever you push to `main`. The manifest, icon, and service worker let supported browsers install it and keep the game available offline after its first visit.
+## Run locally
 
-### Deploy with GitHub Pages
+No build step or dependencies are required. Clone the repository and open `index.html` in a browser, or serve the project directory with any static web server. The service worker is registered on HTTPS sites and on `localhost`.
 
-1. Push this project to a GitHub repository on the `main` branch.
-2. In the repository, open **Settings → Pages** and set the build source to **GitHub Actions**.
-3. Wait for the **Deploy 2048 to GitHub Pages** workflow to finish. The site will be available at `https://<username>.github.io/<repository>/`.
-4. On the iPad, open that HTTPS URL in Safari, tap **Share → Add to Home Screen**, and confirm.
+## Deploy
+
+GitHub Actions deploys the repository to GitHub Pages when changes are pushed to `main` (or when the workflow is run manually). To enable deployment, select **Settings → Pages → GitHub Actions** in the repository. The live site is [https://arnavgmallan.github.io/2048/](https://arnavgmallan.github.io/2048/).
+
+## License
+
+This project is available under the [MIT License](LICENSE).
